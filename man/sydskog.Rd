@@ -13,12 +13,12 @@ A data frame containing all the colours used in the palette:
 \item V1: Red value
 \item V2: Green value
 \item V3: Blue value
-\item option: different color palettes in sydskog.
+\item option: Refers to the characters of the world of the sydskog.
 }
 The sydskog Colour Map.
 
 This function creates a vector of \code{n} equally spaced colors along the
-'sydskog map'.
+'sydskog colour map'.
 }
 \usage{
 sydskogMap(
@@ -69,7 +69,7 @@ channels of \code{n} equally spaced colors along the 'The sydskog' colour map.
 \code{n = 256} by default.
 }
 \description{
-A dataset containing the colour palettes designed for the sothern swedish forest research centre
+A dataset containing the colour palettes from the TV show, book series and video games of 'The sydskog'.
 
 A simple function that returns a plot of all available palettes in the \code{thesydskog} - package
 }

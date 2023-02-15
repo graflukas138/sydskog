@@ -10,7 +10,7 @@
 #'   \item V3: Blue value
 #'   \item option: different color palettes in sydskog.
 #'}
-#sydskog.map
+"sydskog.map"
 
 
 

@@ -60,7 +60,7 @@ for (h in names(sydskog_palettes)) {
 }
 
 
-usethis::use_data(map, internal = TRUE, overwrite = TRUE)
+usethis::use_data(sydskog.map, internal = TRUE, overwrite = TRUE)
 usethis::use_data(sydskog_palettes, overwrite = TRUE)
 usethis::use_pipe(export = TRUE)
 utils::globalVariables(c("red", "green", "blue", "option_name"))
