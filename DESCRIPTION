@@ -1,6 +1,6 @@
 Package: sydskog
 Title: Palettes the the SSFRC
-Version: 1.0.1
+Version: 1.0.0
 Authors@R: 
     person("Lukas", "Graf", , "graflukas57@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-9630-5615"))
