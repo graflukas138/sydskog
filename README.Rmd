@@ -10,7 +10,7 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "man/figures/README-"
 )
-library(icons)
+
 ```
 
 
@@ -23,9 +23,9 @@ The package draws some inspiration from the `gameofthrones`-package.
 
 For questions or suggestions please contact me:
 
-Email: graflukas57@gmail.com `r icon_style(simple_icons("gmail"), scale=2, fill="red")`
+Email: graflukas57@gmail.com 
 
-Twitter: https://twitter.com/graf_gruen `r icon_style(simple_icons("twitter"),scale=2, fill="#1DA1F2")`
+Twitter: https://twitter.com/graf_gruen 
 
 ## Installation
 
