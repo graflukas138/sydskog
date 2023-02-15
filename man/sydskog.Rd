@@ -27,14 +27,14 @@ sydskogMap(
   begin = 0,
   end = 1,
   direction = 1,
-  option = "Geralt"
+  option = "oak"
 )
 
-sydskog(n, alpha = 1, begin = 0, end = 1, direction = 1, option = "Geralt")
+sydskog(n, alpha = 1, begin = 0, end = 1, direction = 1, option = "oak")
 
-sydskog_pal(alpha = 1, begin = 0, end = 1, direction = 1, option = "Geralt")
+sydskog_pal(alpha = 1, begin = 0, end = 1, direction = 1, option = "oak")
 
-sydskog(n, alpha = 1, begin = 0, end = 1, direction = 1, option = "Geralt")
+sydskog(n, alpha = 1, begin = 0, end = 1, direction = 1, option = "oak")
 
 sydskog_palette_names()
 
@@ -77,14 +77,14 @@ A simple function that returns a plot of all available palettes in the \code{the
 
 
 
-pal <- sydskog(255, option = "Geralt")
+pal <- sydskog(255, option = "oak")
 image(volcano, col = pal)
 
 library(ggplot2)
 
 ggplot(data.frame(x = rnorm(10000), y = rnorm(10000)), aes(x = x, y = y)) +
 geom_hex() + coord_fixed() +
-scale_fill_sydskog(option="school_griffin") + theme_bw()
+scale_fill_sydskog(option="oak") + theme_bw()
 
 }
 \author{

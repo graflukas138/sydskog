@@ -14,12 +14,10 @@ Depends:
 Imports:
     ggplot2 (>= 1.0.1),
     dplyr,
-    usethis,
     gridExtra,
-    MASS,
     magrittr,
     grDevices,
-    readr
+    usethis
 Suggests:
     covr
 LazyData: true

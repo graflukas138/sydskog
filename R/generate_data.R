@@ -1,12 +1,11 @@
-library(magrittr)
-library(dplyr)
-library(grDevices)
+library(ggplot2)
+library(usethis)
 
 map <- list()
 
 #' Complete list of palettes
 #'
-#' Use \code{\link{witcher}} to construct palettes of desired length.
+#' Use \code{\link{sydskog}} to construct palettes of desired length.
 #'
 #' @export
 #'
@@ -59,8 +58,7 @@ for (h in names(sydskog_palettes)) {
   map <- rbind(map, df)
 }
 
-
-usethis::use_data(sydskog.map, internal = TRUE, overwrite = TRUE)
+usethis::use_data(map, internal = TRUE, overwrite = TRUE)
 usethis::use_data(sydskog_palettes, overwrite = TRUE)
 usethis::use_pipe(export = TRUE)
 utils::globalVariables(c("red", "green", "blue", "option_name"))

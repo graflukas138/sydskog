@@ -16,7 +16,7 @@ scale_color_sydskog(
   end = 1,
   direction = 1,
   discrete = FALSE,
-  option = "Geralt"
+  option = "oak"
 )
 
 scale_colour_sydskog(
@@ -26,7 +26,7 @@ scale_colour_sydskog(
   end = 1,
   direction = 1,
   discrete = FALSE,
-  option = "Geralt"
+  option = "oak"
 )
 
 scale_colour_sydskog_d(
@@ -35,7 +35,7 @@ scale_colour_sydskog_d(
   begin = 0,
   end = 1,
   direction = 1,
-  option = "Geralt",
+  option = "oak",
   aesthetics = "colour"
 )
 
@@ -45,7 +45,7 @@ scale_color_sydskog_d(
   begin = 0,
   end = 1,
   direction = 1,
-  option = "Geralt",
+  option = "oak",
   aesthetics = "colour"
 )
 
@@ -56,7 +56,7 @@ scale_fill_sydskog(
   end = 1,
   direction = 1,
   discrete = FALSE,
-  option = "Geralt"
+  option = "oak"
 )
 
 scale_fill_sydskog_d(
@@ -65,7 +65,7 @@ scale_fill_sydskog_d(
   begin = 0,
   end = 1,
   direction = 1,
-  option = "Geralt",
+  option = "oak",
   aesthetics = "fill"
 )
 }
@@ -102,11 +102,11 @@ number of colors.
 library(ggplot2)
 ggplot(data.frame(x = rnorm(10000), y = rnorm(10000)), aes(x = x, y = y)) +
 geom_hex() + coord_fixed() +
-scale_fill_sydskog(option="ciri") + theme_bw()
+scale_fill_sydskog(option="slu") + theme_bw()
 
 ggplot(data.frame(x = rnorm(10000), y = rnorm(10000)), aes(x = x, y = y)) +
 geom_hex() + coord_fixed() +
-scale_fill_sydskog(option="geralt") + theme_bw()
+scale_fill_sydskog(option="oak") + theme_bw()
 
 
 }

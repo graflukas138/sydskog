@@ -1,6 +1,6 @@
 #' 'The sydskog' colour map
 #'
-#' A dataset containing the colour palettes designed for the sothern swedish forest research centre
+#' A dataset containing the colour palettes from the TV show, book series and video games of 'The sydskog'.
 #'
 #'
 #'@format A data frame containing all the colours used in the palette:
@@ -8,9 +8,9 @@
 #'   \item V1: Red value
 #'   \item V2: Green value
 #'   \item V3: Blue value
-#'   \item option: different color palettes in sydskog.
+#'   \item option: Refers to the characters of the world of the sydskog.
 #'}
-"sydskog.map"
+#"sydskog.map"
 
 
 
@@ -18,7 +18,7 @@
 #' The sydskog Colour Map.
 #'
 #' This function creates a vector of \code{n} equally spaced colors along the
-#' 'sydskog map'.
+#' 'sydskog colour map'.
 #'
 #' @param n The number of colors (\eqn{\ge 1}) to be in the palette.
 #'
@@ -48,14 +48,14 @@
 #'
 #'
 #'
-#'pal <- sydskog(255, option = "Geralt")
+#'pal <- sydskog(255, option = "oak")
 #'image(volcano, col = pal)
 #'
 #'library(ggplot2)
 #'
 #'ggplot(data.frame(x = rnorm(10000), y = rnorm(10000)), aes(x = x, y = y)) +
 #'geom_hex() + coord_fixed() +
-#'scale_fill_sydskog(option="school_griffin") + theme_bw()
+#'scale_fill_sydskog(option="oak") + theme_bw()
 #'
 
 #' @rdname sydskog
@@ -65,29 +65,29 @@
 #' channels of \code{n} equally spaced colors along the 'The sydskog' colour map.
 #' \code{n = 256} by default.
 #'
-sydskogMap <- function(n = 256, alpha = 1, begin = 0, end = 1, direction = 1, option = "Geralt") {
-
+sydskogMap <- function(n = 256, alpha = 1, begin = 0, end = 1, direction = 1, option = "oak") {
+  
   option <- tolower(option)
-
+  
   if (begin < 0 | begin > 1 | end < 0 | end > 1) {
     stop("begin and end must be in from 0 to 1")
   }
-
+  
   if (abs(direction) != 1) {
     stop("direction must be 1 or -1")
   }
-
+  
   if (direction == -1) {
     tmp <- begin
     begin <- end
     end <- tmp
   }
-
-  colnames(sydskog.map) <- c("R", "G", "B", "option")
-
-  map <- sydskog.map[sydskog.map$option == option, ]
-
-  map_cols <- grDevices::rgb(map$R, map$G, map$B, maxColorValue = 255)
+  
+  colnames(map) <- c("R", "G", "B", "option")
+  
+  map2 <- map[map$option == option, ]
+  
+  map_cols <- grDevices::rgb(map2$R, map2$G, map2$B, maxColorValue = 255)
   fn_cols <- grDevices::colorRamp(map_cols, space = "Lab", interpolate = "spline")
   cols <- fn_cols(seq(begin, end, length.out = n)) / 255
   data.frame(R = cols[, 1], G = cols[, 2], B = cols[, 3], alpha = alpha)
@@ -97,33 +97,33 @@ sydskogMap <- function(n = 256, alpha = 1, begin = 0, end = 1, direction = 1, op
 #' @export
 #'
 #'
-sydskog <- function(n, alpha = 1, begin = 0, end = 1, direction = 1, option = "Geralt") {
-
+sydskog <- function(n, alpha = 1, begin = 0, end = 1, direction = 1, option = "oak") {
+  
   option <- tolower(option)
-
+  
   if (begin < 0 | begin > 1 | end < 0 | end > 1) {
     stop("begin and end must be in from 0 to 1")
   }
-
+  
   if (abs(direction) != 1) {
     stop("direction must be 1 or -1")
   }
-
+  
   if (direction == -1) {
     tmp <- begin
     begin <- end
     end <- tmp
   }
-
-  colnames(sydskog.map) <- c("R", "G", "B", "option")
-
-  map <- sydskog.map[sydskog.map$option == option, ]
-
-  map_cols <- grDevices::rgb(map$R, map$G, map$B, maxColorValue = 255)
+  
+  colnames(map) <- c("R", "G", "B", "option")
+  
+  map2 <- map[map$option == option, ]
+  
+  map_cols <- grDevices::rgb(map2$R, map2$G, map2$B, maxColorValue = 255)
   fn_cols <- grDevices::colorRamp(map_cols, space = "Lab", interpolate = "spline")
   cols <- fn_cols(seq(begin, end, length.out = n)) / 255
   grDevices::rgb(cols[, 1], cols[, 2], cols[, 3], alpha = alpha)
-
+  
 }
 
 
@@ -131,10 +131,10 @@ sydskog <- function(n, alpha = 1, begin = 0, end = 1, direction = 1, option = "G
 #' @rdname sydskog
 #'
 #' @export
-sydskog_pal <- function(alpha = 1, begin = 0, end = 1, direction = 1, option = "Geralt") {
-
+sydskog_pal <- function(alpha = 1, begin = 0, end = 1, direction = 1, option = "oak") {
+  
   option <- tolower(option)
-
+  
   function(n) {
     sydskog(n, alpha, begin, end, direction, option)
   }
@@ -147,10 +147,10 @@ sydskog_pal <- function(alpha = 1, begin = 0, end = 1, direction = 1, option = "
 #'
 #' @export
 scale_color_sydskog <- function(..., alpha = 1, begin = 0, end = 1, direction = 1,
-                            discrete = FALSE, option = "Geralt") {
-
+                                discrete = FALSE, option = "oak") {
+  
   option <- tolower(option)
-
+  
   if (discrete) {
     discrete_scale("colour", "sydskog", sydskog_pal(alpha, begin, end, direction, option), ...)
   } else {
@@ -168,7 +168,7 @@ scale_colour_sydskog <- scale_color_sydskog
 #' @aliases scale_color_sydskog
 #' @export
 scale_colour_sydskog_d <- function(..., alpha = 1, begin = 0, end = 1,
-                               direction = 1, option = "Geralt", aesthetics = "colour") {
+                                   direction = 1, option = "oak", aesthetics = "colour") {
   ggplot2::discrete_scale(
     aesthetics,
     "sydskog_d",
@@ -229,19 +229,19 @@ sydskog <- sydskog
 #' library(ggplot2)
 #' ggplot(data.frame(x = rnorm(10000), y = rnorm(10000)), aes(x = x, y = y)) +
 #' geom_hex() + coord_fixed() +
-#' scale_fill_sydskog(option="ciri") + theme_bw()
+#' scale_fill_sydskog(option="slu") + theme_bw()
 #'
 #' ggplot(data.frame(x = rnorm(10000), y = rnorm(10000)), aes(x = x, y = y)) +
 #' geom_hex() + coord_fixed() +
-#' scale_fill_sydskog(option="geralt") + theme_bw()
+#' scale_fill_sydskog(option="oak") + theme_bw()
 #'
 #'
 #' @export
 scale_fill_sydskog <- function(..., alpha = 1, begin = 0, end = 1, direction = 1,
-                           discrete = FALSE, option = "Geralt") {
-
+                               discrete = FALSE, option = "oak") {
+  
   option <- tolower(option)
-
+  
   if (discrete) {
     discrete_scale("fill", "sydskog", sydskog_pal(alpha, begin, end, direction, option), ...)
   } else {
@@ -253,7 +253,7 @@ scale_fill_sydskog <- function(..., alpha = 1, begin = 0, end = 1, direction = 1
 #' @aliases scale_fill_sydskog
 #' @export
 scale_fill_sydskog_d <- function(..., alpha = 1, begin = 0, end = 1,
-                             direction = 1, option = "Geralt", aesthetics = "fill") {
+                                 direction = 1, option = "oak", aesthetics = "fill") {
   discrete_scale(
     aesthetics,
     "sydskog_d",
@@ -287,7 +287,7 @@ sydskog_colors <- function() {
   dims <- n2mfrow(length(sydskog_palettes))
   oldpar <- par(mfrow = dims, mai = par('mai')/5)
   on.exit(par(oldpar))
-
+  
   for (i in 1:length(sydskog_palettes)) {
     image(matrix(1:50, ncol = 1), col = sydskog(n=255,option = sydskog_palette_names()[[i]]), axes = FALSE)
     text(0.5,0.5,sydskog_palette_names()[[i]], cex=1.5)

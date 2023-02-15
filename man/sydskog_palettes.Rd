@@ -11,6 +11,6 @@ An object of class \code{list} of length 3.
 sydskog_palettes
 }
 \description{
-Use \code{\link{witcher}} to construct palettes of desired length.
+Use \code{\link{sydskog}} to construct palettes of desired length.
 }
 \keyword{datasets}
