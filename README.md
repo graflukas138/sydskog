@@ -77,7 +77,7 @@ txsamp <- subset(txhousing, city %in%
   c("Houston", "Fort Worth", "San Antonio", "Dallas", "Austin"))
 
 ggplot(txsamp, aes(x = median, fill = city)) +
-  geom_histogram(position = "dodge", binwidth = 15000)+ scale_fill_sydskog_d(option = "oak")+ theme_bw()
+  geom_histogram(position = "dodge", binwidth = 15000)+ scale_fill_sydskog_d(option = "palm")+ theme_bw()
 ```
 
 ![](man/figures/README-unnamed-chunk-8-1.png)<!-- -->
@@ -89,7 +89,7 @@ txsamp <- subset(txhousing, city %in%
   c("Houston", "Fort Worth", "San Antonio", "Dallas", "Austin"))
 
 ggplot(txsamp, aes(x = median, fill = city)) +
-  geom_histogram(position = "dodge", binwidth = 15000)+ scale_fill_sydskog_d(option = "oak", direction = -1) + theme_bw()
+  geom_histogram(position = "dodge", binwidth = 15000)+ scale_fill_sydskog_d(option = "palm", direction = -1) + theme_bw()
 ```
 
 ![](man/figures/README-unnamed-chunk-9-1.png)<!-- -->

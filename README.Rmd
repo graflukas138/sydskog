@@ -88,7 +88,7 @@ txsamp <- subset(txhousing, city %in%
   c("Houston", "Fort Worth", "San Antonio", "Dallas", "Austin"))
 
 ggplot(txsamp, aes(x = median, fill = city)) +
-  geom_histogram(position = "dodge", binwidth = 15000)+ scale_fill_sydskog_d(option = "oak")+ theme_bw()
+  geom_histogram(position = "dodge", binwidth = 15000)+ scale_fill_sydskog_d(option = "palm")+ theme_bw()
 ```
 
 Order of colors can be reversed using `direction = -1`.
@@ -98,6 +98,6 @@ txsamp <- subset(txhousing, city %in%
   c("Houston", "Fort Worth", "San Antonio", "Dallas", "Austin"))
 
 ggplot(txsamp, aes(x = median, fill = city)) +
-  geom_histogram(position = "dodge", binwidth = 15000)+ scale_fill_sydskog_d(option = "oak", direction = -1) + theme_bw()
+  geom_histogram(position = "dodge", binwidth = 15000)+ scale_fill_sydskog_d(option = "palm", direction = -1) + theme_bw()
 ```
 
