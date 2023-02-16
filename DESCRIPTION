@@ -17,7 +17,8 @@ Imports:
     gridExtra,
     magrittr,
     grDevices,
-    usethis
-Suggests:
+    usethis,
     covr
+Suggests:
+
 LazyData: true
