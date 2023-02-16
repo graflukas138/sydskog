@@ -19,6 +19,4 @@ Imports:
     grDevices,
     usethis,
     covr
-Suggests:
-
 LazyData: true
