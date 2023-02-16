@@ -289,8 +289,9 @@ sydskog_colors <- function() {
   on.exit(par(oldpar))
   
   for (i in 1:length(sydskog_palettes)) {
-    image(matrix(1:50, ncol = 1), col = sydskog(n=255,option = sydskog_palette_names()[[i]]), axes = FALSE)
-    text(0.5,0.5,sydskog_palette_names()[[i]], cex=1.5)
+    image(matrix(1:50, ncol = 1), col = sydskog(n=6,option = sydskog_palette_names()[[i]]), axes = FALSE)
+    text(0.5,0.5,sydskog_palette_names()[[i]], cex=2.5)
   }
 }
+
 
