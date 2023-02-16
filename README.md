@@ -30,8 +30,7 @@ install.packages("sydskog")
 
 ## Palettes
 
-`sydskog` provides 30 different palettes. An overview can be viewed with
-the `sydskog_colors()` function:
+An overview can be viewed with the `sydskog_colors()` function:
 
 ``` r
 library(sydskog)

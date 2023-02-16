@@ -11,9 +11,12 @@ map <- list()
 #'
 
 sydskog_palettes <- list(
+  aspen = c("#444341", "#BFBDB6", "#354C3F", "#F2DF53"),
+  birch = c("#7b521c", "#bb792b", "#f6a844", "#c69a59","#a89274"), 
   slu = c("black","green", "blue"),
-  not_slu=  c("#12141F", "#4e0002", "#9D0005", "darkgreen", "lightgreen"),
-  oak =  c("#382a1d", "#98632c", "#816e5d", "#c1af98", "#6f5943")
+  pine = c("#263E31", "#334A36", "#4C5E46", "#697A50", "#8D9967"), 
+  spruce = c("#4F2F18", "#C0A983", "#97ACA5", "#5A6F6A", "#314842","#14261E"),
+  oak =  c("#382a1d",  "#98632c", "#816e5d", "#c1af98")
 )
 
 
