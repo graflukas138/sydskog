@@ -15,7 +15,7 @@ sydskog_palettes <- list(
   birch = c("#7b521c", "#bb792b", "#f6a844", "#c69a59","#a89274"), 
   blueberry = c("#132833", "#153040", "#1F4762", "#FDA300", "goldenrod2"),
   cowberry = c("#143608", "#17361d", "#4f6857", "#e0ecdd", "#7e2136"),
-  heather = c("#660F57", "#663366", "#003366", "#E7EBF0", "#B1BDCD" ,"#5B7290"),
+  heather = c("#660F57", "#663366", "#003366","#5B7290"),
   slu = c("black","green", "purple"),
   pine = c("#263E31", "#334A36", "#4C5E46", "#697A50", "#8D9967"), 
   spruce = c("#4F2F18", "#C0A983", "#97ACA5", "#5A6F6A", "#314842","#14261E"),
