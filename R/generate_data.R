@@ -17,7 +17,7 @@ sydskog_palettes <- list(
   cowberry = c("#143608", "#17361d", "#4f6857", "#e0ecdd", "#7e2136"),
   heather = c("#660F57", "#663366", "#003366","#5B7290"),
   slu = c("#471871","#653496", "#7B52AE","#74B652","#56941E", "#94C773"),
-  summer_oak = c("#4F2F18", "#C0A983","#c1be70", "#b2ae4c"),
+  summeroak = c("#4F2F18", "#C0A983","#e0deb7","#c1be70","#BDD01A"),
   palm = c("#fab73d", "#fddca5","#bbc8ba", "#546747", "#2b331f"),
   pine = c("#263E31", "#334A36", "#4C5E46", "#697A50", "#8D9967"),
   poplar = c("#efeedb","#e0deb7","#d0ce94","#c1be70", "#b2ae4c","#8e8b3d","#6a682e","#47451e"),
